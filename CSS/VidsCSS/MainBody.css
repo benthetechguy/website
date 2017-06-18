@@ -1,0 +1,38 @@
+#Container {
+
+width:1000px;
+heigth:auto;
+margin-left:auto;
+margin-right:auto;
+margin-top:11px;
+margin-bottom:21px;
+
+}
+#Header {
+height:150px;
+background-color:#ffffff;
+}
+#Menu {
+height:60px;
+background-color:#666;
+
+}
+#SideBar {
+width:250px;
+height:4500px;
+background-color:#D66225;
+float:right;
+text-align:center;
+}
+#MainBody {
+width:750px;
+height:4500px;
+background-color:#ffffff;
+float:left;
+text-align: center;
+}
+#Footer {
+height:100px;
+background:#595959;
+clear:both;
+}
