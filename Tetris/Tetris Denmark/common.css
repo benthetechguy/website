@@ -1,0 +1,127 @@
+body	{background:#262629;}
+
+td, div, p
+	{font-size:11px}
+
+h1	{font-size:14px}
+
+body *	{font-family: Arial, Sans-Serif;}
+
+td	{vertical-align:top;}
+
+abbr
+	{border-bottom: 1px dotted #3a3a3a}
+
+#floater{position:absolute;background:#202020;opacity:0.9;-moz-border-radius:8px;-webkit-border-radius:8px;border:1px solid #444; border-color: #343438 #3a3a3d #3a3a3d #343438}
+	
+#floater:hover em{color: #dadaee}
+
+#floater .opts
+{
+	text-align: left; 
+	float: right;
+	margin: 15px 30px 0 10px
+}
+
+
+#pause-msg, #gameover-msg
+	{margin-top:18px;font-size:26px;color:#BFFFFF;font-weight:bold}
+	
+#runit
+{
+	float: left;
+	border:1px solid  #444;
+	border-color: #343438 #3a3a3d #3a3a3d #343438;
+	background:#2a2a2d;color:white;
+	padding:3px 10px;
+	margin-top: 25px;
+	margin-left: 30px;
+	font-size:20px;
+	font-weight:bold;
+	-moz-border-radius:3px;
+}
+
+*	{color:#bcbcc8;font-family:Arial;}
+
+h1, a	{color:#d0d0d5; margin: 2ex 0 1ex;}
+h1:first-child	{margin-top: 0}
+
+h1 em	{font-size: 120%; font-style: oblique; color: white}
+
+em	{color:#ddd}
+
+em, a	{font-style:normal;font-weight:bold;}
+
+#desc	{border-left: 1px solid #333; padding-left: .5ex}
+#desc:hover em, #desc:hover a {color:#ddd}
+
+a	{text-decoration:none;border-bottom: 1px solid}
+a:hover, #desc a:hover	{text-decoration:underline; border:none; color:white}
+
+table.score
+	{width:100%;border-spacing: 0 1px; border-spacing: 0}
+
+table.score td
+	{padding-left:1ex;margin:.3ex 0; overflow: hidden}
+
+table.score tr td
+	{border-top: 1px solid #2e2e2e}
+
+table.score tr:first-child td
+	{border-top: none}
+
+table.score tr.even
+	{background:#282828}
+
+table.score tr.odd
+	{opacity: .7}
+
+table.score tr.current	
+	{font-weight: bold}
+
+table.score tr.current *
+	{color: #BFFFFF}
+
+table.score tr:hover td
+	{color:#eee;}
+table.score tr td:hover
+	{color:#ffa;} 
+
+table.score td:first-child
+	{width: 3ex;}
+
+table.score td:last-child
+	{padding-right: 1ex;}
+
+table.score td:last-child,
+table.score td:first-child
+	{text-align: right}
+
+table.score tr.current td:first-child
+	{font-weight: normal}
+
+table.score td:first-child:after{content: ".";}
+table.score td:last-child:after{content: "pts"; opacity: 0.4; font-weight:normal}
+table.score td[colspan]	{text-align: center; font-weight: bold; width: auto;}
+table.score td[colspan]:after	{content: ''}
+
+.stats {text-align: right; font-size: 80%}
+.stats span	{padding-right: .5ex;}
+.stats span:before	{content: '/'; opacity: .4; padding-right: .5ex}
+.stats span:first-child:before{content: ''; padding-right: 0}
+
+.global span {color: #BFFFFF}
+
+.repetance	{font-size: 80%}
+.clear-scores
+	{background:#262629; border: 1px solid #333; -moz-border-radius: 1ex; margin: .6ex 2ex}
+
+.nick	{padding-left: 1ex; background:#111; border: 1px solid #333; -moz-border-radius: 1ex;}
+
+.meters	{width: 6ex; float: right; clear: right; text-align: right;}
+
+#t-s	{color: #5EDC32}
+#t-sh	{color: black}
+#t-b	{color: #F7DF00; opacity: 0; }
+#t-b:before{content: '+'}
+#t-d	{color: #F772FF; font-style: italic; font-weight: bold;}

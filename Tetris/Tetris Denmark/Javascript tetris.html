@@ -1,0 +1,46 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Javascript tetris</title>
+<meta name="keywords" content="javascript, tetris, javascript tetris, javascript game, canvas tag, jstetris, zzandy, entertainment, game, classic">
+<meta name="description" content="JavaScript Tetris v3. This is a tetris game written in javascript without using a single image. The point of the game is to score as much as possible. Fast play is favored.">
+<link rel="StyleSheet" href="common.css" type="text/css">
+</head>
+<body>
+<center><div id="tetris"><table><tbody><tr><td><canvas id="tetris-canvas" width="383" height="526">Only for browsers supporting canvas element.</canvas></td><td id="desc" width="214"><h1>JavaScript Tetris v3</h1><p>This is a tetris game written in javascript without using a single image.</p><p>The point of the game is to score as much as possible. Fast play is favored.</p><p>By dropping figures (with <em>space</em>) one can get many points - score for drop­ing is pro­por­tional to the num­ber of lines the figure falls. Speed in­crea­ses with time and not with score.</p><p>To restart just press <em>F5</em>. To pause press <em>Pause/Break</em> button or <em>P</em>.</p><p>To control block's position use <em>left</em> and <em>right</em> buttons, <em>a</em> and <em>d</em> or <em>h</em> and <em>l</em>. To rotate figure press <em>up</em> button, <em>w</em>&nbsp;or&nbsp;<em>j</em>. <em>Ctrl+up</em> or <em>Shift+w(j)</em> rotates clockwise.</p><p>To lower figure by one level press <em>down</em> arrow, <em>s</em> or <em>k</em>. It is re­com­mended though to drop figures with <em>space</em> as it's faster and yields significant amount of score. </p><div>© A. Vynogradov 2007-2008</div><div id="addr"><a href="mailto:zzandy@gmail.com">zzandy@gmail.com</a></div></td></tr></tbody></table><div id="floater" style="top: 220px; left: 485.217px; width: 320px; height: 105px;"><button id="runit">Start</button><div class="opts"><input type="checkbox" id="opt-classic"><label for="opt-classic" title="Speed increases every 10K points, points given only for burnt lines">Play by "classic" rules</label><br><input type="checkbox" id="opt-beams" checked="checked"><label for="opt-beams" title="Highlight where figure is going to land">Landing "beams"</label><br><input type="checkbox" id="opt-score" checked="checked"><label for="opt-score" title="Animate score (turning off increses performance)">Animate score</label><br><input type="checkbox" id="opt-cw"><label for="opt-cw" title="Set main rotation direction to clocwise">Rotate mainly clockwise</label></div></div></div></center>
+<script type="text/javascript">
+var target = document.getElementById('tetris');
+var tetrisDescription = target.innerHTML;
+target.innerHTML = '';
+var bg = document.createElement('canvas');
+</script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript" src="tag.class.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<script type="text/javascript" src="scoring.js"></script>
+<script type="text/javascript" src="color.class.js"></script>
+<script type="text/javascript" src="geometry.js"></script>
+<script type="text/javascript" src="figure.class.js"></script>
+<script type="text/javascript" src="field.class.js"></script>
+<script type="text/javascript" src="canvas.js"></script>
+<script type="text/javascript" src="timer.class.js"></script>
+<script type="text/javascript" src="lib.js"></script>
+<script type="text/javascript" src="tetris.class.js"></script>
+<script type="text/javascript">
+//
+// Javascript tetris v3
+// By Andriy Vynogradov 2007-2008
+//
+
+//// Let's go ////////////////////////////////////////////////////////////////
+
+var query = Ajax.getQuery(window.location.href);
+
+var height = {max: 700, min: 500};
+var base = ((window.innerHeight + 960) / 3).constrain(height);
+
+var boxSide = parseInt((query.size || base * (query.scale || 1)) / Tetris.defaults.fieldSize.height);
+
+tetris = new Tetris(target, {box : new Rectangle(boxSide, boxSide), rd: query.rotate || 'ccw'});
+
+</script>
+
+</body></html>
